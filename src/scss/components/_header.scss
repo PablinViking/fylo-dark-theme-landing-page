@@ -1,0 +1,61 @@
+@use '../util/mixins' as m;
+
+
+.header{
+    @include m.flex(r,center){
+        justify-content: space-between;
+    }
+    padding: 24px 20px 0;
+
+    @media screen and (min-width: 768px) {
+        padding: 40px 40px 0;
+    }
+
+    @media screen and (min-width: 1280px) {
+        padding: 80px 80px 0;
+    }
+
+
+    &__logo{
+        width: 80px;
+
+        @media screen and (min-width: 768px) {
+            width: 120px;
+        }
+
+        @media screen and (min-width: 1280px) {
+            width: 176px;
+        }
+    }
+
+    &__items{
+        @include m.flex(r, center){
+            justify-content: space-between
+        }
+
+        width: 165px;
+        font-size: 0.75em;
+        font-weight: 400;
+        font-family: var(--Raleway);
+        margin-right: 10px;
+
+        @media screen and (min-width: 768px) {
+            width: 220px;
+            font-size: 0.875em;
+        }
+
+        @media screen and (min-width: 1280px) {
+            width: 270px;
+        }
+    }
+
+    &__link{
+        &:hover{
+            cursor: pointer;
+            font-weight: 700;
+            text-decoration: underline;
+            transition: 200ms;
+        }
+    }
+
+}

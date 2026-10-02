@@ -1,0 +1,20 @@
+.button-g{
+    height: 48px;
+    width: 240px;
+    border-radius: 25px;
+    color: var(--White);
+    background: linear-gradient(
+        to right,
+        var(--Teal-200),
+        var(--Cyan-500)
+    );
+    font-family: var(--Raleway);
+    font-weight: 700;
+    font-size: 0.85em;
+
+    &:hover{
+        cursor: pointer;
+        background: var(--Teal-200-a);
+    }
+}
+

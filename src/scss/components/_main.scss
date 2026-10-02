@@ -1,0 +1,80 @@
+@use '../util/mixins' as m;
+
+.main{
+    position: relative;
+    @include m.flex(c, center);
+    text-align: center;
+    padding: 48px 35px 0;
+    isolation: isolate;
+    background: linear-gradient(
+        var(--Navy-850) 0%,
+        var(--Navy-850) 64%,
+        var(--Navy-900) 64%,
+        var(--Navy-900) 100%
+    );
+    @media screen and (min-width: 768px) {
+        padding: 74px 40px 165px;
+        background: var(--Navy-850);
+
+    }
+
+    &::before{
+        content: "";
+        position: absolute;
+        bottom: 35%;
+        width: 100%;
+        height: 141px;
+        background-image: url('../../assets/images/bg-curvy-mobile.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+        z-index: -1;
+
+        @media screen and (min-width: 768px) {
+            bottom: 0;
+            height: 410px;
+            background-image: url('../../assets/images/bg-curvy-desktop.svg');
+        }
+    }
+
+    &__hero{
+        margin-bottom: 30px;
+        max-width: 720px;
+
+        @media screen and (min-width: 768px){
+            margin-bottom: 40px;
+        }
+    }
+
+    &__title{
+        font-size: 1.5em;
+        line-height: 1.4em;
+        margin-bottom: 16px;
+
+        @media screen and (min-width: 768px){
+            width: 500px;
+            margin-bottom: 22px;
+        }
+
+        @media screen and (min-width: 1280px){
+            width: 685px;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+
+    }
+
+    &__description{
+        margin-bottom: 30px;
+
+        @media screen and (min-width: 768px){
+            width: 500px;
+            font-size: 1em;
+        }
+
+         @media screen and (min-width: 1280px){
+            width: 590px;
+            font-size: 1.25em;
+        }
+    }
+}

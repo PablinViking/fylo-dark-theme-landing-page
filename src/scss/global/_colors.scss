@@ -1,0 +1,17 @@
+:root{
+    //Principal Colors
+    --Navy-850: hsl(217, 28%, 15%); //intro and email sign up background
+    --Navy-900: hsl(218, 28%, 13%); //main background
+    --Navy-950: hsl(216, 53%, 9%); //footer background
+    --Navy-800: hsl(219, 30%, 18%); //testimonials background
+
+    //Specific Colors
+    --Teal-200: hsl(176, 68%, 64%); //button gradient
+    --Cyan-500: hsl(198, 60%, 50%); //button gradient
+    --Teal-200-a: hsl(198, 100%, 72%); //button hover
+    --Red-500: hsl(0, 100%, 63%); //error
+
+    //Neutral Colors
+    --White: hsl(0, 0%, 100%);
+    --Black-shadow: hsla(0, 0%, 0%, 0.5);
+}

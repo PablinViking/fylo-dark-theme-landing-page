@@ -1,0 +1,98 @@
+@use '../util/mixins' as m;
+
+.early-acc-sect{
+    width: 336px;
+    background-color: var(--Navy-850);
+    padding: 40px 28px 37px;
+    border-radius: 6px;
+    position: absolute;
+    bottom: 920px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    box-shadow: 1px 1px 5px var(--Black-shadow);
+
+    @media screen and (min-width: 768px){
+        bottom: 870px; 
+    }
+
+    @media screen and (min-width: 1024px){
+        width: 862px;
+        padding: 50px 76px 40px;
+        bottom: 425px;
+    }
+
+    &__title{
+        @media screen and (min-width: 1024px){
+            font-size: 2em;
+        }
+    }
+
+    &__text{
+        line-height: 1.5em;
+        font-size: 0.85em;
+        margin: 16px 0 30px;
+
+        @media screen and (min-width: 1024px){
+            width: 625px;
+            margin: 22px auto 38px;
+            font-size: 0.88em;
+
+        }
+    }
+
+
+    // FORM //
+    &__form{
+        @include m.flex(c, center);
+
+        @media screen and (min-width: 1024px){
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__text-input{
+        width: 280px;
+        height: 48px;
+        border-radius: 25px;
+        padding-left: 25px;
+        margin-bottom: 24px;
+
+        &:focus{
+            outline: none;
+        }
+
+        @media screen and (min-width: 1024px){
+            margin-bottom: 0;
+            width: 480px;
+        }
+    }
+
+    &__submit-input{
+        width: 280px;
+
+        @media screen and (min-width: 1024px){
+            width: 200px;
+        }
+    }
+
+    &__error{
+        font-size: 0.6em;
+        color: var(--Red-500);
+        position: absolute;
+        bottom: 94px;
+        left: 53px;
+        visibility: hidden;
+
+        @media screen and (min-width: 1024px){
+            bottom: 22px;
+            left: 101px;
+            font-size: 0.8em;
+        }
+    }
+
+    &__error--visibility{
+        visibility: visible;
+    }
+}

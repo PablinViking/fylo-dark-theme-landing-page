@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--Navy-850);
+    font-family: var(--Open-Sans);
+    color: var(--White);
+}
+
+#root{
+    position: relative;
+}
+
+h1,
+h2{
+    font-family: var(--Raleway);
+}
+
+h2{
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+p{
+    font-size: 0.89em;
+    line-height: 1.4em;
+
+    
+}
+
+a{
+    text-decoration: none;
+    color: var(--White);
+
+}
+
+ul{
+    list-style-type: none;
+}
+
+img{
+    width: 100%;
+}
+
+.page-wrapper{
+    background-color: var(--Navy-900);
+    display: flow-root;
+}

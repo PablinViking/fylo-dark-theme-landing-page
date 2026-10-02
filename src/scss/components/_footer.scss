@@ -1,0 +1,203 @@
+@use '../util/mixins' as m;
+
+
+
+.footer{
+    background-color: var(--Navy-950);
+    padding: 250px 26px 42px;
+
+    @media screen and (min-width: 1024px){
+        padding: 200px 0 90px;
+    }
+
+
+    &__wrapper{
+        @media screen and (min-width: 768px){
+            @include m.flex(c,center);
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        @media screen and (min-width: 1024px){
+            --widt-1024: 900px;
+            width: var(--widt-1024);
+        }
+
+        @media screen and (min-width: 1280px){
+            --widt-1280: 1240px;
+            width: var(--widt-1280);
+        }
+    }
+
+
+    &__logoImg{
+        width: 176px;
+
+        @media screen and (min-width: 768px){
+            align-self: flex-start;
+        }
+
+
+    }
+
+    // Genearl container
+    &__g-container{
+        @include m.flex(c, null);
+
+        @media screen and (min-width: 768px){
+            align-items: center;
+        }
+
+        @media screen and (min-width: 1024px){
+            flex-direction: row;
+            width: var(--widt-1024);
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-top: 36px;
+        }
+
+        @media screen and (min-width: 1280px){
+            width: var(--widt-1280);
+        }
+    }
+
+    //Address
+    &__address{
+        @include m.flex(c, null);
+        font-style: normal;
+        padding-left: 2px;
+        margin: 40px 0 85px;
+        align-items: flex-start;
+
+        @media screen and (min-width: 768px){
+            width: 500px;
+        }
+
+        @media screen and (min-width: 1024px){
+            margin: 0;
+            width: 380px;
+        }
+
+        @media screen and (min-width: 1280px){
+            flex-direction: row;
+            justify-content: space-between;
+            width: 640px;
+        }
+    }
+
+    &__addr-item{
+        @include m.flex(r, center);
+        margin-top: 24px;
+
+        @media screen and (min-width: 1280px){
+            margin-top: 0;
+        }        
+
+        &--location{
+            align-items: flex-start;
+            margin-top: 0;
+
+            @media screen and (min-width: 1280px){
+                width: 370px;
+            }
+        }
+
+        &--email{
+            @media screen and (min-width: 1280px){
+                margin-top: 24px;
+            }  
+        }
+    }
+    
+
+    &__addr-icon{
+        width: 18px;
+        padding-top: 2px;
+
+        &--location{
+            padding: 5px 0 0 4px; 
+        }
+    }
+
+    &__addr-info{
+        margin-left: 16px;
+
+        &--location{
+            margin-left: 19px;
+            font-size: 0.98em;
+            line-height: 1.5em;
+        }
+    }
+
+
+    // Company and legal links
+    &__nav-container{
+        & + &{
+            margin-top: 48px;
+        }
+
+        @media screen and (min-width: 1024px){
+            & + &{
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__links{
+        @media screen and (min-width: 768px){
+            @include m.flex(c, center);
+        }
+
+        @media screen and (min-width: 1024px){
+            align-items: flex-start;
+        }
+    }
+
+    &__item{
+        &:hover{
+            font-weight: 700;
+            transition: 200ms;
+        }
+        & + &{
+            margin-top: 22px;
+        }
+    }
+
+
+    // Social media links
+    &__nav-container-social{
+        margin-top: 80px;
+
+        @media screen and (min-width: 1024px){
+            margin-top: 0;
+        }
+    }
+
+
+    &__links-social{
+        @include m.flex(r, center){
+            justify-content: center;
+        }
+    }
+
+    &__item-social{
+        & + &{
+            margin-left: 11px;
+        }
+    }
+
+    &__link-social{
+        @include m.flex(c, center){
+            justify-content: center;
+        }
+        padding: 6px;
+        border: 1px solid;
+        border-radius: 50%;
+
+        &:hover{
+            box-shadow: 1px 1px 10px var(--White);
+            transition: 200ms;
+        }
+    }
+
+}

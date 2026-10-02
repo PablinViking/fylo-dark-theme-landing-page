@@ -1,0 +1,14 @@
+@mixin flex($direction, $align){
+    display: flex;
+    @if $direction == c{
+        flex-direction: column;
+    } @if $direction == r{
+        flex-direction: row;
+    } @if $direction == cr{
+        flex-direction: column-reverse;
+    } @if $direction == rr{
+        flex-direction: row-reverse;
+    }
+    align-items: $align;
+    @content
+}

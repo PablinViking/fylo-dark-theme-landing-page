@@ -1,0 +1,64 @@
+@use '../util/mixins' as m;
+
+.info-section-01{
+    @include m.flex(c, center);
+    text-align: center;
+    padding: 130px 25px 0;
+
+    @media screen and (min-width: 768px){
+        padding: 0px 0px 0;
+        
+    }
+
+    @media screen and (min-width: 1024px){
+        
+        margin: 0 auto;
+    }
+
+    &__wrapper{
+        @include m.flex(c, center);
+        & + &{
+            margin-top: 95px;
+        }
+
+        @media screen and (min-width: 1024px){
+            width: 900px;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__card{
+        margin-top: 95px;
+        &:first-child{
+            margin-top: 0;
+        }
+
+        @media screen and (min-width: 768px){
+            width: 370px;
+        }
+        
+        @media screen and (min-width: 1024px){
+            margin-top: 0;
+        }
+        
+    }
+    
+    &__title{
+        margin: 30px 0 7px;
+    }
+
+    //Specific image property
+    &__img--access,
+    &__img--collaboration{
+       width: 65px;
+    }
+
+    &__img--security{
+       width: 53px;
+    }
+
+    &__img--store{
+        width: 70px;
+    }
+}
